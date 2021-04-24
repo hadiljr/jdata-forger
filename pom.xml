@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.jdataforger</groupId>
     <artifactId>jdata-forger</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
     <name>JData-Forger</name>
     <description>
         Simple library to generate fake data, useful for database seed and development.
@@ -43,7 +41,7 @@
         <connection>scm:git:git://github.com/hadiljr/jdata-forger.git</connection>
         <developerConnection>scm:git:git@github.com:/hadiljr/jdata-forger.git</developerConnection>
         <url>https://github.com/hadiljr/jdata-forger</url>
-        <tag>HEAD</tag>
+        <tag>v0.1b</tag>
     </scm>
 
     <distributionManagement>
