@@ -1,4 +1,4 @@
-package com.github.jdataforger.generator.abstraction;
+package io.github.jdataforger.generator.abstraction;
 
 /***
  *

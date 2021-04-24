@@ -1,6 +1,6 @@
-package com.github.jdataforger;
+package io.github.jdataforger;
 
-import com.github.jdataforger.generator.person.identification.CPF;
+import io.github.jdataforger.generator.person.identification.CPF;
 
 public class Forger {
 

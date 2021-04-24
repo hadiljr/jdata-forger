@@ -1,6 +1,6 @@
-package com.github.jdataforger.generator.person.identification;
+package io.github.jdataforger.generator.person.identification;
 
-import com.github.jdataforger.Forger;
+import io.github.jdataforger.Forger;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

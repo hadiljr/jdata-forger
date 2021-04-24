@@ -1,14 +1,9 @@
-package com.github.jdataforger.generator.person.identification;
+package io.github.jdataforger.generator.person.identification;
 
-import com.github.jdataforger.generator.abstraction.IForgery;
+import io.github.jdataforger.generator.abstraction.IForgery;
 
-import javax.crypto.spec.ChaCha20ParameterSpec;
 import java.util.*;
-import java.util.function.IntConsumer;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class CPF implements IForgery<String> {
 
