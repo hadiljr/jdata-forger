@@ -4,7 +4,7 @@
 
     <groupId>io.github.jdataforger</groupId>
     <artifactId>jdata-forger</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
     <name>JData-Forger</name>
     <description>
         Simple library to generate fake data, useful for database seed and development.
