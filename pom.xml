@@ -138,7 +138,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>${version.coveralls-maven-plugin}</version>
                 <configuration>
-                    <repoToken>F2dn5xaXrogwkOVVriQNr6Efb5kIaTtlQ</repoToken>
+                    <repoToken>${env.COVERALLS_TOKEN}</repoToken>
                     <sourceEncoding>UTF-8</sourceEncoding>
                 </configuration>
                 <dependencies>
