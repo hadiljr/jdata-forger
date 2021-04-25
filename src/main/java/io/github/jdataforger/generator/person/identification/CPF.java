@@ -5,6 +5,12 @@ import io.github.jdataforger.generator.abstraction.IForgery;
 import java.util.*;
 import java.util.stream.Collectors;
 
+/**
+ *
+ * Forge CPF (Social number in Brazil) numbers
+ * @author Hadil
+ *
+ */
 public class CPF implements IForgery<String> {
 
     @Override
