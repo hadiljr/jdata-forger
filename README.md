@@ -3,7 +3,7 @@ JData Forger
 
 [![Maven Status](https://maven-badges.herokuapp.com/maven-central/io.github.hadiljr/jdata-forger/badge.svg?style=flat)](http://mvnrepository.com/artifact/io.github.hadiljr/jdata-forger)
 [![Build Status](https://www.travis-ci.com/hadiljr/jdata-forger.svg?branch=master)](https://www.travis-ci.com/hadiljr/jdata-forger)
-[![Coverage Status](https://coveralls.io/repos/github/hadiljr/jdata-forger/badge.svg)](https://coveralls.io/github/hadiljr/jdata-forger)
+[![Coverage Status](https://coveralls.io/repos/github/hadiljr/jdata-forger/badge.svg?branch=master)](https://coveralls.io/github/hadiljr/jdata-forger?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Esta biblioteca gera dados falsos. Util para seeds de projetos em desenvolvimento.
