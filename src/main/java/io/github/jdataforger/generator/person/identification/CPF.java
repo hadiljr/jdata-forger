@@ -34,13 +34,6 @@ public class CPF implements IForgery<String> {
         }
     }
 
-    private void generateVerifyDigits(List<Integer> baseNumbers) {
-        //Create first verify digit
-        baseNumbers.add(createVerifyDigit(baseNumbers));
-        //Create second verify digit
-        baseNumbers.add(createVerifyDigit(baseNumbers));
-    }
-
     private String generateCPF(List<Integer> digits) {
 
         if (baseNumberIsValid(digits)) {
@@ -51,6 +44,12 @@ public class CPF implements IForgery<String> {
         return null;
     }
 
+    private void generateVerifyDigits(List<Integer> baseNumbers) {
+        //Create first verify digit
+        baseNumbers.add(createVerifyDigit(baseNumbers));
+        //Create second verify digit
+        baseNumbers.add(createVerifyDigit(baseNumbers));
+    }
 
     private boolean baseNumberIsValid(List<Integer> baseNumber) {
         return !baseNumber.stream()
