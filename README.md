@@ -40,16 +40,16 @@ Forger forger = new Forger();
 String cpf = forger.CPF().fake(); // 700.779.240-53
 ```
 
-Geradores de Dados 
+Geradores de Dados Na Versão 
 -----
 * CPF
 
 TODO
 ----
-- Gerador de CNPJ
-- Gerador de Nomes de Pessoas
-- Gerador de Data de Nascimento
-- Gerador de Número de Telefone
+- [X] Gerador de CNPJ
+- [ ] Gerador de Nomes de Pessoas
+- [ ] Gerador de Data de Nascimento
+- [ ] Gerador de Número de Telefone
 
 - Adicionar novos geradores de dados no geral
  
