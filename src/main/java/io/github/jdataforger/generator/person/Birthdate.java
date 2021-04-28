@@ -1,4 +1,4 @@
-package io.github.jdataforger.generator.person.identification;
+package io.github.jdataforger.generator.person;
 
 import io.github.jdataforger.generator.abstraction.IForgery;
 
@@ -21,13 +21,16 @@ public class Birthdate implements IForgery<LocalDate> {
         return generateBirthdate(1,100);
     }
 
+
     /**
      * Generate random birthday between ( inclusive) ages;
      * @param minAge - min age value
      * @param maxAge - max age value
      * @return {@link LocalDate}
+     *
+     * @throws IllegalArgumentException if minAge is greater than maxAge
      */
-    public LocalDate between(long minAge, long maxAge) {
+    public LocalDate between(long minAge, long maxAge) throws IllegalArgumentException {
         return generateBirthdate(minAge,maxAge);
     }
 
@@ -37,9 +40,9 @@ public class Birthdate implements IForgery<LocalDate> {
             throw new IllegalArgumentException("minAge should be less than maxAge");
         }
 
-        long minDate = LocalDate.now().minusYears(minAge).toEpochDay();
-        long maxDate = LocalDate.now().minusYears(maxAge+1).toEpochDay();
-        long randomDate = ThreadLocalRandom.current().nextLong(minDate,maxDate);
+        long early = LocalDate.now().minusYears(minAge).toEpochDay();
+        long older = LocalDate.now().minusYears(maxAge+1).toEpochDay();
+        long randomDate = ThreadLocalRandom.current().nextLong(older,early);
 
         return LocalDate.ofEpochDay(randomDate);
     }
