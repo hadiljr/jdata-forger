@@ -1,6 +1,3 @@
-JData Forger
-============
-
 [![Maven Status](https://maven-badges.herokuapp.com/maven-central/io.github.hadiljr/jdata-forger/badge.svg?style=flat)](http://mvnrepository.com/artifact/io.github.hadiljr/jdata-forger)
 [![Build Status](https://www.travis-ci.com/hadiljr/jdata-forger.svg?branch=master)](https://www.travis-ci.com/hadiljr/jdata-forger)
 [![Coverage Status](https://coveralls.io/repos/github/hadiljr/jdata-forger/badge.svg?branch=master)](https://coveralls.io/github/hadiljr/jdata-forger?branch=master)
@@ -43,3 +40,8 @@ String cpf = forger.CPF().fake(); // 700.779.240-53
 Geradores de Dados Na Versão 
 -----
 * CPF 
+
+Contribuições
+-------------
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W34GREL)
