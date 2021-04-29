@@ -41,8 +41,9 @@ Geradores de Dados Na Versão
 -----
 * CPF 
 
-# Café ?
+Café ?
+-----
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W34GREL)
 
-![Coffee](assets/images/CoffeQR.png "Logo Title Text 1")
+[![Coffee](assets/images/CoffeQR.png)]
