@@ -49,7 +49,7 @@ TODO
 - [X] Gerador de CNPJ
 - [ ] Gerador de Nomes de Pessoas
 - [X] Gerador de Data de Nascimento
-- [ ] Gerador de Número de Telefone
+- [X] Gerador de Número de Telefone
 
 - Adicionar novos geradores de dados no geral
  
