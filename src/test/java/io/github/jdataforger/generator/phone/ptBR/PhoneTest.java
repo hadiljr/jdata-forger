@@ -28,7 +28,38 @@ public class PhoneTest {
         String number = forger.Phone().fake();
         System.out.println(number);
         assertTrue(number.matches(phoneRegex));
+    }
 
+    @Test
+    @DisplayName("Create new Phone Number From Null")
+    public void create_Fake_Phone_Number_From(){
+        String number = forger.Phone().getPhoneFrom(null,null);
+        System.out.println(number);
+        assertTrue(number.matches(phoneRegex));
+    }
+
+    @Test
+    @DisplayName("Create new Mobile Number")
+    public void create_Fake_Mobile_Number(){
+        String number = forger.Phone().getPhoneFrom(PhoneType.MOBILE,null);
+        System.out.println(number);
+        assertTrue(number.matches(phoneRegex));
+    }
+
+    @Test
+    @DisplayName("Create new Mobile Number from São Paulo")
+    public void create_Fake_Mobile_Number_Sao_Paulo(){
+        String number = forger.Phone().getPhoneFrom(PhoneType.MOBILE,11);
+        System.out.println(number);
+        assertTrue(number.matches(phoneRegex));
+    }
+
+    @Test
+    @DisplayName("Create new Fixed Number")
+    public void create_Fake_Fixed_Number(){
+        String number = forger.Phone().getPhoneFrom(PhoneType.FIXED,null);
+        System.out.println(number);
+        assertTrue(number.matches(phoneRegex));
     }
 
     @Test
