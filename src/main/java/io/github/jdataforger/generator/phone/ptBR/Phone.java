@@ -16,6 +16,8 @@ import static io.github.jdataforger.generator.phone.ptBR.PhoneUtil.DDD;
  */
 public class Phone implements IForgery<String> {
 
+    private SecureRandom random = new SecureRandom();
+
     @Override
     public String fake() {
         return generateModel().toString();
@@ -35,18 +37,18 @@ public class Phone implements IForgery<String> {
     }
 
     private int generateDDD() {
-        int dddIndex = ThreadLocalRandom.current().ints(1, 0, DDD.length).findFirst().getAsInt();
+
+        int dddIndex = random.ints(1, 0, DDD.length).findFirst().getAsInt();
         return DDD[dddIndex];
     }
 
     private PhoneType generatePhoneType() {
-        int dddIndex = ThreadLocalRandom.current().ints(1, 0, 2).findFirst().getAsInt();
+        int dddIndex = random.ints(1, 0, 2).findFirst().getAsInt();
         return PhoneType.values()[dddIndex];
     }
 
     private String generateNumber(PhoneType type, int ddd) {
         String firstNumber = "";
-        SecureRandom rd = new SecureRandom();
 
         if (type == PhoneType.MOBILE) {
             //DDD de São Paulo
@@ -54,16 +56,16 @@ public class Phone implements IForgery<String> {
                 firstNumber += "9";
             }
 
-            firstNumber += Integer.toString(rd
+            firstNumber += Integer.toString(random
                     .ints(1, 4, 10)
                     .findFirst().getAsInt());
         } else {
-            firstNumber += Integer.toString(rd
+            firstNumber += Integer.toString(random
                     .ints(1, 2, 4)
                     .findFirst().getAsInt());
         }
 
-        return firstNumber + rd
+        return firstNumber + random
                 .ints(7, 0, 10)
                 .mapToObj(d -> Integer.toString(d))
                 .reduce("", (ps, e) -> ps + e);
