@@ -3,6 +3,7 @@ package io.github.jdataforger.generator.phone.ptBR;
 import io.github.jdataforger.generator.abstraction.IForgery;
 import io.github.jdataforger.generator.phone.ptBR.model.PhoneModel;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -45,40 +46,26 @@ public class Phone implements IForgery<String> {
 
     private String generateNumber(PhoneType type, int ddd) {
         String firstNumber = "";
+        SecureRandom rd = new SecureRandom();
+
         if (type == PhoneType.MOBILE) {
             //DDD de São Paulo
             if (ddd == 11) {
                 firstNumber += "9";
             }
-            firstNumber += Integer.toString(ThreadLocalRandom.current()
+
+            firstNumber += Integer.toString(rd
                     .ints(1, 4, 10)
                     .findFirst().getAsInt());
         } else {
-            firstNumber += Integer.toString(ThreadLocalRandom.current()
+            firstNumber += Integer.toString(rd
                     .ints(1, 2, 4)
                     .findFirst().getAsInt());
         }
 
-        return firstNumber + ThreadLocalRandom.current()
+        return firstNumber + rd
                 .ints(7, 0, 10)
                 .mapToObj(d -> Integer.toString(d))
                 .reduce("", (ps, e) -> ps + e);
     }
-/*
-    private String generateMobileNumber(){
-        int firstNumber = ThreadLocalRandom.current().ints(1,2,10).findFirst().getAsInt();
-        return "9"+firstNumber+ThreadLocalRandom.current()
-                         .ints(7,0,10)
-                         .mapToObj(d -> Integer.toString(d))
-                         .reduce("",(ps,e)-> ps+e);
-    }
-
-    private String generateFixedNumber(){
-        int firstNumber = ThreadLocalRandom.current().ints(1,2,10).findFirst().getAsInt();
-        int size = ThreadLocalRandom.current().ints(1,6,8).findFirst().getAsInt();
-        return ""+ firstNumber + ThreadLocalRandom.current()
-                .ints(size,0,10)
-                .mapToObj(d -> Integer.toString(d))
-                .reduce("",(ps,e)-> ps+e);
-    }*/
 }
