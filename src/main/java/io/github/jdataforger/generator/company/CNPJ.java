@@ -2,6 +2,7 @@ package io.github.jdataforger.generator.company;
 
 import io.github.jdataforger.generator.abstraction.IForgery;
 
+import java.security.SecureRandom;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -13,7 +14,7 @@ public class CNPJ implements IForgery<String> {
 
     @Override
     public String fake() {
-        Random rn = new Random();
+        SecureRandom rn = new SecureRandom();
         List<Integer> baseDigits = rn.ints(8, 0, 10)
                 .mapToObj(d -> Integer.valueOf(d))
                 .collect(Collectors.toList());

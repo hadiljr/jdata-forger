@@ -2,6 +2,7 @@ package io.github.jdataforger.generator.person;
 
 import io.github.jdataforger.generator.abstraction.IForgery;
 
+import java.security.SecureRandom;
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -36,13 +37,15 @@ public class Birthdate implements IForgery<LocalDate> {
 
     private LocalDate generateBirthdate(long minAge,long maxAge) throws IllegalArgumentException{
 
+        SecureRandom rd = new SecureRandom();
+
         if(minAge>maxAge){
             throw new IllegalArgumentException("minAge should be less than maxAge");
         }
 
         long early = LocalDate.now().minusYears(minAge).toEpochDay();
         long older = LocalDate.now().minusYears(maxAge+1).toEpochDay();
-        long randomDate = ThreadLocalRandom.current().nextLong(older,early);
+        long randomDate = rd.longs(older,early).findFirst().getAsLong();
 
         return LocalDate.ofEpochDay(randomDate);
     }
